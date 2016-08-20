@@ -120,6 +120,29 @@ Ya que el repositorio remoto y Local no se han sincronizado (Diferentes Reposito
 	 create mode 100644 README.md
 
 
+- Ahora se nos añade el unico archivo del Repositorio Remoto (Readme.md) a nuestro repositorio local
+
+
+- Si emitimos un status podremos ver que un archivo (Este mismo) del repositorio local ha sido modificado:
+	
+	$ git status
+	On branch master
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+		modified:   GitHub_Taller_Uso.txt
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+
+
+
+667
+
+
 
 HELP:
 
