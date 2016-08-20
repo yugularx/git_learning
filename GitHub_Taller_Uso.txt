@@ -29,6 +29,10 @@ Taller uso de Git y GitHub (Comunidad del controlador de versiones "GIT")
 	- Colocamos un titulo en el texbox "Title"
 	- Pegamos el contenido de nuestra llave publica en el Texbox "Key"
 	- Por ultimo damos click en el boton "Add SSH Key"
+	- En nuestra maquina local anadimos la llave privada:
+		
+		$ eval `ssh-agent -s`
+		$ ssh-add ~/.ssh/clave_privada_rsa
 
 7- Iniciamos nuestro repositorio local con el comando "git init" dentro del directorio recien creado;
 
