@@ -1,0 +1,33 @@
+Taller uso de Git y GitHub (Comunidad del controlador de versiones "GIT")
+
+1- Instalar el controlador de versiones "git" con el manejador de paquetes que poseas ()En mi caso dnf de fedora 23:
+
+	$ sudo dnf install git
+
+2- Crear cuenta en GitHub.com Suministrando "username", "email", y "password"
+
+3- Crear un Repositorio de Prueba (Lo cual es una carpeta al final), elegir tipo "Public" o sea gratis (Para las cuentas privadas el contenido del/los repositorios no es visible para la comunidad, solo para el creador de este y a quien haya dado permiso. Este tipo de cuenta es comercial, con cuartos).
+
+	-Antes de presionar el boton "Create Repository" tachamos la opcione "Initialize 	this Repository With a Readme" para poder utilizarlo o clonarlo a la maquina local, 		y por supuesto subir contenido a este desde la mi maquina local"
+
+4- Suministrar al ambiente de git en la (maquina local) el username y email: [Creo que esto es opcional]:
+
+	$ git config --global user.name "yugularx"
+	$ git config --global user.email "fdomin24@gmail.com"
+
+5- Crear un directorio con el nombre igual o parecido al nombre del repositorio recien creado (Esto para evitar confuciones futuras manejando varios Repositorios.)
+
+	$ mkdir git_learning
+
+6- Para que la cuenta en GitHub.com reconozca mi host local debo suministrarle el contenido de una ssh llave publica que vamos a generar con:
+
+	$ ssh-keygen -t ecdsa -b 521		//Se puede utilizar solo el comando ssh-keygen sin opciones, las use para crear una con estas caracteristicas (521 bits).
+
+	- Se crea una llave publica y otra privada en ~./ssh
+	- Vemos el contenido de la llave publica, la copiamos
+	- Nos dirigimos a nuestra cuenta de Github.com > Perfil > Settings > SSH and GPG keys > Y presionamos el boton "New SSH Key"
+	- Colocamos un titulo en el texbox "Title"
+	- Pegamos el contenido de nuestra llave publica en el Texbox "Key"
+	- Por ultimo damos click en el boton "Add SSH Key"
+
+	
