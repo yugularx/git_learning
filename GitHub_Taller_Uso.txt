@@ -136,9 +136,37 @@ Ya que el repositorio remoto y Local no se han sincronizado (Diferentes Reposito
 	no changes added to commit (use "git add" and/or "git commit -a")
 
 
+13- Actualizar Archivo para un posterior commit:
+
+	Este archivo actualizado no sera rastreado a menos que actulicemos con git o emitamos un "commit" para todos los archivos des repositorio:
+
+		$ git add .		//Actualiza todos los archivos del repositorio local para que luego se les pueda dar commit 
+					(Aceptar el cambio dentro del Repositorio).
+
+		$ git add GitHub_Taller_Uso.txt 	//Actualiza el archivo "GitHub_Taller_Uso.txt " en el repositorio local, 
+							para que luego se le pueda dar commit (Aceptar el cambio dentro del Repositorio).
 
 
+		$ git commit -a		// Acepta todas las ultimas midificaciones de todos los archivos dentro del repositorio
+		[master 682d435] 4to Commit
+		1 file changed, 23 insertions(+)
 
+14- Enviar el contenido del repositorio local al remoto (Hacer Push o enviar commits al remoto) dentro de la rama(Branch, por el momento solo tenemos este branch) master:
+		
+		$ git push origin master
+		
+		Counting objects: 18, done.
+		Delta compression using up to 4 threads.
+		Compressing objects: 100% (17/17), done.
+		Writing objects: 100% (18/18), 4.57 KiB | 0 bytes/s, done.
+		Total 18 (delta 6), reused 0 (delta 0)
+		remote: Resolving deltas: 100% (6/6), done.
+		To https://github.com/yugularx/git_learning
+		   8f131e6..682d435  master -> master
+
+
+		Nota: El programador o usuario de Git puede tener varias ramas (Branch), una para desarrollo en si, otra para los
+		diseñadores, la de produccion(Que puede ser master), etc.
 
 667
 
