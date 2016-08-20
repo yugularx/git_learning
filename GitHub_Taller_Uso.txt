@@ -165,10 +165,8 @@ Ya que el repositorio remoto y Local no se han sincronizado (Diferentes Reposito
 		   8f131e6..682d435  master -> master
 
 
-		Nota: El programador o usuario de Git puede tener varias ramas (Branch), una para desarrollo en si, otra para los
-		diseñadores, la de produccion(Que puede ser master), etc.
-
-667
+		Nota: El/Los programador/es, o usuario de Git puede tener varias ramas (Branch), una para el servidor de desarrollo
+		en si, otra para los diseñadores, otro branch para el servidor de produccion(Que puede ser master), etc.
 
 
 
