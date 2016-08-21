@@ -1,6 +1,3 @@
-# scripts-systems
-Learning to use Github
-
 Taller uso de Git y GitHub (Comunidad del controlador de versiones "GIT")
 
 1- Instalar el controlador de versiones "git" con el manejador de paquetes que poseas ()En mi caso dnf de fedora 23:
@@ -32,6 +29,27 @@ Taller uso de Git y GitHub (Comunidad del controlador de versiones "GIT")
 	- Colocamos un titulo en el texbox "Title"
 	- Pegamos el contenido de nuestra llave publica en el Texbox "Key"
 	- Por ultimo damos click en el boton "Add SSH Key"
+	- En nuestra maquina local anadimos la llave privada:
+		
+		$ eval `ssh-agent -s`
+		$ ssh-add ~/.ssh/clave_privada_rsa
+	
+	- Editar en el archivo "~/nombrerepositorio/.git/config" la URL del respositorio remoto (origin) para que use 
+	protocolo ssh en vez de http:
+
+		$ vim git_learning/.git/config
+
+		[remote "origin"]
+		#url = http://github.com/yugularx/git_learning		
+			Cambiar a:
+
+ 		url = git@github.com:yugularx/git_learning.git	//Asi debe quedar
+
+		O Emitir el comando:
+
+		$ git remote set-url origin git@github.com:yugularx/git_learning.git		//El cual hace la misma funcion
+
+NOTA: Esto nos sirve paque que no nos pida las credenciales de GitHub cada vez que hagamos push
 
 7- Iniciamos nuestro repositorio local con el comando "git init" dentro del directorio recien creado;
 
@@ -170,8 +188,6 @@ Ya que el repositorio remoto y Local no se han sincronizado (Diferentes Reposito
 
 		Nota: El/Los programador/es, o usuario de Git puede tener varias ramas (Branch), una para el servidor de desarrollo
 		en si, otra para los diseñadores, otro branch para el servidor de produccion(Que puede ser master), etc.
-
-667
 
 
 

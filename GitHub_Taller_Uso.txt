@@ -189,6 +189,10 @@ Ya que el repositorio remoto y Local no se han sincronizado (Diferentes Reposito
 		Nota: El/Los programador/es, o usuario de Git puede tener varias ramas (Branch), una para el servidor de desarrollo
 		en si, otra para los diseñadores, otro branch para el servidor de produccion(Que puede ser master), etc.
 
+15- Concepto del Fork: Es una nueva version (No un branch) de un proyecto existente (o repositorio ) en mi cuenta de GitHub, pero no soy propietario de este. Dicho fork luego se puede mergear con el proyecto principal [Con las mejoras hechas] a traves de Pull Request.
+
+- PULL Request: Como su nombre lo dice, es un requerimeinto al Administrador de un repositorio principal para que "Jale" alguna mejora
+o modifiacion (Commits) de un fork que posees en tu repositorio de GitHub al repositorio del proyecto principal. Estos pull request pueden ser tanto rechazados como aceptados
 
 
 HELP:
