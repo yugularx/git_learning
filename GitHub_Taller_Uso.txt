@@ -192,9 +192,50 @@ Ya que el repositorio remoto y Local no se han sincronizado (Diferentes Reposito
 15- Concepto del Fork: Es una nueva version (No un branch) de un proyecto existente (o repositorio ) en mi cuenta de GitHub, pero no soy propietario de este. Dicho fork luego se puede mergear con el proyecto principal [Con las mejoras hechas] a traves de Pull Request.
 
 - PULL Request: Como su nombre lo dice, es un requerimeinto al Administrador de un repositorio principal para que "Jale" alguna mejora
-o modifiacion (Commits) de un fork que posees en tu repositorio de GitHub al repositorio del proyecto principal. Estos pull request pueden ser tanto rechazados como aceptados
+o modifiacion (Commits) de un fork que posees en tu repositorio de GitHub al repositorio del proyecto principal. Estos pull request pueden ser tanto rechazados como aceptados.
 
 
+16- Branch o Rama Y Merge o Fusion:
+
+	Branch en una version alternativa del branch principal (Master), al cual se le pueden hacer modificaciones para al final 
+	unirlo o agregar estos commit a la Rama Principal. Los Branch pueden , por ejemplo, ser enviado tanto a un servidor de
+	desarrollo, como a un servidor de test, y tambien al servidor dedicado a los disenadores.
+
+	- Crear Branch:
+	$ git branch devep
+	$ git branch test
+
+17- Para cambiar de la Rama master (Central) a otra utilizamos la opcion checkout:
+
+	$ git checkout devep
+	M	GitHub_Taller_Uso.txt
+	Switched to branch 'devep'
+	
+	$ git status
+	On branch devep
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+		modified:   GitHub_Taller_Uso.txt
+
+
+- Los cambios hechos en esta rama no se reflejan en la Rama Master hasta haberlas fusionado (Merge).
+
+		$ git status
+		On branch test
+		Changes to be committed:
+		  (use "git reset HEAD <file>..." to unstage)
+
+			modified:   GitHub_Taller_Uso.txt
+
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git checkout -- <file>..." to discard changes in working directory)
+
+			modified:   GitHub_Taller_Uso.txt
+
+- Como vemos los estados de las distintas ramas son diferentes
 HELP:
 
 These are common Git commands used in various situations:
