@@ -33,6 +33,23 @@ Taller uso de Git y GitHub (Comunidad del controlador de versiones "GIT")
 		
 		$ eval `ssh-agent -s`
 		$ ssh-add ~/.ssh/clave_privada_rsa
+	
+	- Editar en el archivo "~/nombrerepositorio/.git/config" la URL del respositorio remoto (origin) para que use 
+	protocolo ssh en vez de http:
+
+		$ vim git_learning/.git/config
+
+		[remote "origin"]
+		#url = http://github.com/yugularx/git_learning		
+			Cambiar a:
+
+ 		url = git@github.com:yugularx/git_learning.git	//Asi debe quedar
+
+		O Emitir el comando:
+
+		$ git remote set-url origin git@github.com:yugularx/git_learning.git		//El cual hace la misma funcion
+
+NOTA: Esto nos sirve paque que no nos pida las credenciales de GitHub cada vez que hagamos push
 
 7- Iniciamos nuestro repositorio local con el comando "git init" dentro del directorio recien creado;
 
